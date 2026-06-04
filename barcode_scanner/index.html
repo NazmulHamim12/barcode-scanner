@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Scanner</title>
+
+   
+    <style>
+
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f7fb;
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:500px;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+#scanBtn{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:14px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#scanBtn:hover{
+    opacity:.9;
+}
+
+#scanner-container{
+    margin-top:20px;
+    display:none;
+}
+
+#video{
+    width:100%;
+    border-radius:12px;
+    border:2px solid #ddd;
+}
+
+#result{
+    margin-top:20px;
+    padding:15px;
+    background:#f1f5f9;
+    border-radius:10px;
+    word-break:break-word;
+    font-weight:bold;
+}
+    </style>
+
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Barcode Scanner</h1>
+
+        <button id="scanBtn">
+            Scan Barcode
+        </button>
+
+        <div id="scanner-container">
+            <video id="video"></video>
+        </div>
+
+        <div id="result">
+            Scan Result Will Appear Here
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
